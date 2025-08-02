@@ -17,6 +17,10 @@ github.com/kitoyanok66/pantelapet-prot v0.0.0-20250801171550-b3c9bf4ec854 h1:c0z
 github.com/kitoyanok66/pantelapet-prot v0.0.0-20250801171550-b3c9bf4ec854/go.mod h1:UPxs7iai/tOf1oLbj1uRe3ty7t2PDUbencbBAeK/31E=
 github.com/kitoyanok66/pantelapet-prot v1.0.0 h1:ahj3psO74Q7JpvNURxmhOwRxPQC0ZU9SXTrZoQeow/0=
 github.com/kitoyanok66/pantelapet-prot v1.0.0/go.mod h1:UPxs7iai/tOf1oLbj1uRe3ty7t2PDUbencbBAeK/31E=
+github.com/kitoyanok66/pantelapet-prot v1.0.1 h1:3IZdDRxxirpG59K64x/XH6Lo8Q2YkTKSkYnmHaIPHwM=
+github.com/kitoyanok66/pantelapet-prot v1.0.1/go.mod h1:UPxs7iai/tOf1oLbj1uRe3ty7t2PDUbencbBAeK/31E=
+github.com/kitoyanok66/pantelapet-prot v1.0.2 h1:kGxfy5XIgcU19z9VoLQRF0fX7PPOPGZBLrBV7oLah6o=
+github.com/kitoyanok66/pantelapet-prot v1.0.2/go.mod h1:UPxs7iai/tOf1oLbj1uRe3ty7t2PDUbencbBAeK/31E=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=

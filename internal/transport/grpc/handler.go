@@ -35,16 +35,18 @@ func (h *Handler) CreateUser(ctx context.Context, req *userpb.CreateUserRequest)
 	}, nil
 }
 
-func (h *Handler) GetUser(ctx context.Context, req *userpb.GetUserRequest) (*userpb.User, error) {
-	u, err := h.svc.GetUserByID(req.Id)
+func (h *Handler) GetUser(ctx context.Context, req *userpb.GetUserRequest) (*userpb.GetUserResponse, error) {
+	u, err := h.svc.GetUserByID(req.GetId())
 	if err != nil {
 		return nil, err
 	}
 
-	return &userpb.User{
-		Id:       u.ID,
-		Email:    u.Email,
-		Password: u.Password,
+	return &userpb.GetUserResponse{
+		User: &userpb.User{
+			Id:       u.ID,
+			Email:    u.Email,
+			Password: u.Password,
+		},
 	}, nil
 }
 
@@ -66,7 +68,7 @@ func (h *Handler) ListUsers(ctx context.Context, _ *userpb.ListUsersRequest) (*u
 	return &userpb.ListUsersResponse{Users: pbUsers}, nil
 }
 
-func (h *Handler) UpdateUser(ctx context.Context, req *userpb.UpdateUserRequest) (*userpb.User, error) {
+func (h *Handler) UpdateUser(ctx context.Context, req *userpb.UpdateUserRequest) (*userpb.UpdateUserResponse, error) {
 	u, err := h.svc.UpdateUser(req.GetId(), user.UserRequest{
 		Email:    req.Email,
 		Password: req.Password,
@@ -75,10 +77,12 @@ func (h *Handler) UpdateUser(ctx context.Context, req *userpb.UpdateUserRequest)
 		return nil, err
 	}
 
-	return &userpb.User{
-		Id:       u.ID,
-		Email:    u.Email,
-		Password: u.Password,
+	return &userpb.UpdateUserResponse{
+		User: &userpb.User{
+			Id:       u.ID,
+			Email:    u.Email,
+			Password: u.Password,
+		},
 	}, nil
 }
 

@@ -11,12 +11,12 @@ import (
 func main() {
 	db, err := database.InitDB()
 	if err != nil {
-		log.Fatal("error: ", err)
+		log.Fatalf("failed to connect to database: %v", err)
 	}
 	repo := user.NewUserRepository(db)
 	svc := user.NewUserService(repo)
 
 	if err := transportgrpc.RunGRPC(svc); err != nil {
-		log.Fatalf("gRPC сервер завершился с ошибкой: %v", err)
+		log.Fatalf("Users gRPC server error: %v", err)
 	}
 }
