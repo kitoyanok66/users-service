@@ -36,7 +36,7 @@ func (h *Handler) CreateUser(ctx context.Context, req *userpb.CreateUserRequest)
 }
 
 func (h *Handler) GetUser(ctx context.Context, req *userpb.GetUserRequest) (*userpb.GetUserResponse, error) {
-	u, err := h.svc.GetUserByID(req.GetId())
+	u, err := h.svc.GetUserByID(req.Id)
 	if err != nil {
 		return nil, err
 	}
@@ -69,7 +69,7 @@ func (h *Handler) ListUsers(ctx context.Context, _ *userpb.ListUsersRequest) (*u
 }
 
 func (h *Handler) UpdateUser(ctx context.Context, req *userpb.UpdateUserRequest) (*userpb.UpdateUserResponse, error) {
-	u, err := h.svc.UpdateUser(req.GetId(), user.UserRequest{
+	u, err := h.svc.UpdateUser(req.Id, user.UserRequest{
 		Email:    req.Email,
 		Password: req.Password,
 	})
@@ -87,7 +87,7 @@ func (h *Handler) UpdateUser(ctx context.Context, req *userpb.UpdateUserRequest)
 }
 
 func (h *Handler) DeleteUser(ctx context.Context, req *userpb.DeleteUserRequest) (*emptypb.Empty, error) {
-	err := h.svc.DeleteUser(req.GetId())
+	err := h.svc.DeleteUser(req.Id)
 	if err != nil {
 		return nil, err
 	}
